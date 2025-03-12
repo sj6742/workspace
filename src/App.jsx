@@ -79,14 +79,14 @@ const certificates = [
     id: 11,
     title: "Mathematical Modelling and Applications in Engineering – MMAME 2022",
     institution: "Gandhinagar University",
-    description: "Participated in the MMAME-2022 event at Gandhinagar University, exploring mathematical modelling and its applications in engineering",
+    description: "Participated in the MMAME-2022 event at Gandhinagar University, exploring mathematical modelling and its applications in engineering.",
     image: "/Maths.jpg",
   },
   {
     id: 12,
     title: "Entrepreneurship & Digital Innovation",
     institution: "Lingaya`s institute",
-    description: "Participated in the MMAME-2022 event at Gandhinagar University, exploring mathematical modelling and its applications in engineering",
+    description: "Participated in the MMAME-2022 event at Gandhinagar University, exploring mathematical modelling and its applications in engineering.",
     image: "/inyerpriter.jpg",
   },
 ];
