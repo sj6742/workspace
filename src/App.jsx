@@ -131,26 +131,7 @@ const NowPage = () => {
   };
 
   const faqs = [
-    {
-      question: "Personal Portfolio Website Development",
-      answer:
-        "Designing and developing a personal portfolio website to showcase my skills, projects, and experiences. The website highlights my proficiency in frontend and backend technologies and serves as a professional digital presence.",
-    },
-    {
-      question: "Real-Time Chat Application",
-      answer:
-        "Building a real-time chat application with a focus on backend development. Implementing WebSocket communication, user authentication, and database integration to enable seamless real-time messaging.",
-    },
-    {
-      question: "Bookstore Website Enhancement",
-      answer:
-        "Enhancing the functionality of a bookstore website by integrating MongoDB for secure user authentication and efficient data management. Improving user experience by adding interactive features using HTML, CSS, JavaScript, and Bootstrap.",
-    },
-    {
-      question: "Academic Report Preparation",
-      answer:
-        "Compiling a 7-week progress report for college submission, detailing the development, challenges, and accomplishments of my ongoing projects.",
-    },
+    
     {
       question: "Exploring AI/ML integration with Python",
       answer:
@@ -262,36 +243,44 @@ const NowPage = () => {
 
 
   return (
-    <div className="min-h-screen bg-[#0f1216] text-white flex flex-col items-center p-6 pt-20">
+    <div className="min-h-screen bg-gradient-to-b from-[#0f1216] to-[#1a1d21] text-white flex flex-col items-center p-6 pt-20">
       <Header />
       <motion.section
         id="focus"
-        className="backdrop-blur-lg bg-white/10 border border-white/20 text-white shadow-xl rounded-2xl p-8 w-full max-w-3xl mb-10 mt-12"
+        className="backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl rounded-3xl p-8 w-full max-w-3xl mb-12 mt-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <h2 className="text-2xl font-bold mb-5 text-white text-center">📌 Current Focus</h2>
-        <div className="space-y-4">
+        <h2 className="text-3xl font-extrabold mb-6 text-center tracking-wide">📌 Current Focus</h2>
+        <div className="space-y-5">
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
-              className="border border-white/20 bg-gray-800/30 p-4 rounded-lg shadow-md"
-              whileHover={{ scale: 1.02 }}
+              className="border border-white/20 bg-gray-900/40 p-5 rounded-xl shadow-lg hover:shadow-2xl transition duration-300"
+              whileHover={{ scale: 1.03 }}
             >
               <button
-                className="w-full text-left  flex justify-between font-bold items-center text-white"
+                className="w-full text-left flex justify-between items-center font-semibold text-white text-lg tracking-wide"
                 onClick={() => toggleFAQ(index)}
               >
                 {faq.question}
-                <span className="text-white">{openIndex === index ? "▲" : "▼"}</span>
+                <span className="text-gray-300 text-xl">{openIndex === index ? "▲" : "▼"}</span>
               </button>
-              {openIndex === index && <p className="mt-2 text-gray-300 text-sm">{faq.answer}</p>}
+              {openIndex === index && (
+                <motion.p
+                  className="mt-3 text-gray-300 text-base leading-relaxed"
+                  initial={{ opacity: 0, y: -5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {faq.answer}
+                </motion.p>
+              )}
             </motion.div>
           ))}
         </div>
       </motion.section>
-      
     </div>
   );
 };
