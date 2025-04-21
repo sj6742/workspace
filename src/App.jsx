@@ -112,7 +112,7 @@ const certificates = [
           </Link>
         </li>
         <li>
-          <Link to="https://portfoliosj.vercel.app/#contact" target="_blank" className="hover:text-blue-400 transition duration-300">
+          <Link to="https://sujal-khaki.vercel.app/#contact" target="_blank" className="hover:text-blue-400 transition duration-300">
             Contact 
           </Link>
         </li>
